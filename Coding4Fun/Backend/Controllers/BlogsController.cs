@@ -18,18 +18,20 @@ namespace Backend.Controllers
         {
             using (var dbContext = new BloggingContext())
             {
-                var blog = dbContext.Blogs.FirstOrDefault();
+                var blogs = dbContext.Blogs;
 
-                var blogDto = new BlogDTO
+                var blogDtos = new List<BlogDTO>();
+
+                foreach (var blog in blogs)
                 {
-                    ID = blog.BlogId,
-                    Url = blog.Url,
-                };
+                    blogDtos.Add(new BlogDTO
+                    {
+                        ID = blog.BlogId,
+                        Url = blog.Url,
+                    });
+                }
 
-
-                return new BlogDTO[] { blogDto };
-
-
+                return blogDtos;
             }
         }
 

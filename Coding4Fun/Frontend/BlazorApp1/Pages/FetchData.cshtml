@@ -2,11 +2,11 @@
 @using SharedLib
 @inject HttpClient Http
 
-<h1>Weather forecast</h1>
+<h1>Blogs</h1>
 
 <p>This component demonstrates fetching data from the server.</p>
 
-@if (forecasts == null)
+@if (blogs == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -15,18 +15,16 @@ else
     <table class="table">
         <thead>
             <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
+                <th>ID</th>
+                <th>URL</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
+            @foreach (var blog in blogs)
             {
                 <tr>
-                    <td>@forecast.ID</td>
-                    <td>@forecast.Url</td>
+                    <td>@blog.ID</td>
+                    <td>@blog.Url</td>
                 </tr>
             }
         </tbody>
@@ -34,18 +32,10 @@ else
 }
 
 @functions {
-    BlogDTO[] forecasts;
+    List<BlogDTO> blogs;
 
     protected override async Task OnInitAsync()
     {
-        forecasts = await Http.GetJsonAsync<BlogDTO[]>("http://localhost:5000/api/Blogs");
-    }
-
-    class WeatherForecast
-    {
-        public DateTime Date { get; set; }
-        public int TemperatureC { get; set; }
-        public int TemperatureF { get; set; }
-        public string Summary { get; set; }
+        blogs = await Http.GetJsonAsync<List<BlogDTO>>("http://localhost:5000/api/Blogs");
     }
 }
