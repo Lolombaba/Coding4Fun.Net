@@ -1,0 +1,9 @@
+C:\Users\FX10987\Coding4Fun\SharedLib\bin\Debug\netstandard2.0\SharedLib.deps.json
+C:\Users\FX10987\Coding4Fun\SharedLib\bin\Debug\netstandard2.0\SharedLib.dll
+C:\Users\FX10987\Coding4Fun\SharedLib\bin\Debug\netstandard2.0\SharedLib.pdb
+C:\Users\FX10987\Coding4Fun\SharedLib\obj\Debug\netstandard2.0\SharedLib.csprojAssemblyReference.cache
+C:\Users\FX10987\Coding4Fun\SharedLib\obj\Debug\netstandard2.0\SharedLib.csproj.CoreCompileInputs.cache
+C:\Users\FX10987\Coding4Fun\SharedLib\obj\Debug\netstandard2.0\SharedLib.AssemblyInfoInputs.cache
+C:\Users\FX10987\Coding4Fun\SharedLib\obj\Debug\netstandard2.0\SharedLib.AssemblyInfo.cs
+C:\Users\FX10987\Coding4Fun\SharedLib\obj\Debug\netstandard2.0\SharedLib.dll
+C:\Users\FX10987\Coding4Fun\SharedLib\obj\Debug\netstandard2.0\SharedLib.pdb
